@@ -1,0 +1,238 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-07-29T05:45:00.745Z",
+        "line": 4,
+        "name": "Validate successfully approved offer request",
+        "description": "",
+        "id": "oppfi-potential-customers-approval-feature;validate-successfully-approved-offer-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2054000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "base URL with end point and \"valid\" for approval request data",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"valid\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.OppfiPartnerTestSteps.baseURLWithEndPointAndInvalidForApprovalRequestData(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2197270000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user submits request for approval with POST call",
+            "match": {
+              "location": "steps.OppfiPartnerTestSteps.user_submits_request_for_approval_with_POST_call()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 416858000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "validate user gets response with accepted value as \"true\" and the code \"201\" and status \"APPROVED\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"true\"",
+                  "offset": 51
+                },
+                {
+                  "val": "\"201\"",
+                  "offset": 71
+                },
+                {
+                  "val": "\"APPROVED\"",
+                  "offset": 88
+                }
+              ],
+              "location": "steps.OppfiPartnerTestSteps.userGetsResponseWithStatusCodeBadRequest(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Oppfi_Api"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-07-29T05:45:03.417Z",
+        "line": 9,
+        "name": "Validate declined approval request",
+        "description": "",
+        "id": "oppfi-potential-customers-approval-feature;validate-declined-approval-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 128000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "base URL with end point and \"invalid\" for approval request data",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"invalid\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.OppfiPartnerTestSteps.baseURLWithEndPointAndInvalidForApprovalRequestData(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 293659000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user submits request for approval with POST call",
+            "match": {
+              "location": "steps.OppfiPartnerTestSteps.user_submits_request_for_approval_with_POST_call()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22383000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "validate user gets response with accepted value as \"false\" and the code \"315\" and status \"DECLINED\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"false\"",
+                  "offset": 51
+                },
+                {
+                  "val": "\"315\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"DECLINED\"",
+                  "offset": 89
+                }
+              ],
+              "location": "steps.OppfiPartnerTestSteps.userGetsResponseWithStatusCodeBadRequest(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Oppfi_Api"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-07-29T05:45:03.736Z",
+        "line": 14,
+        "name": "Validate request without system making the decision",
+        "description": "",
+        "id": "oppfi-potential-customers-approval-feature;validate-request-without-system-making-the-decision",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 101000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "base URL with end point and \"malformed\" for approval request data",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"malformed\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.OppfiPartnerTestSteps.baseURLWithEndPointAndInvalidForApprovalRequestData(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 282360000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user submits request for approval with POST call",
+            "match": {
+              "location": "steps.OppfiPartnerTestSteps.user_submits_request_for_approval_with_POST_call()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22319000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "validate user gets response with accepted value as \"false\" and the code \"314\" and status \"DECLINED\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"false\"",
+                  "offset": 51
+                },
+                {
+                  "val": "\"314\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"DECLINED\"",
+                  "offset": 89
+                }
+              ],
+              "location": "steps.OppfiPartnerTestSteps.userGetsResponseWithStatusCodeBadRequest(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Oppfi_Api"
+          }
+        ]
+      }
+    ],
+    "name": "Oppfi potential customers approval feature",
+    "description": "",
+    "id": "oppfi-potential-customers-approval-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/PartnerTestOppLoans.feature",
+    "tags": [
+      {
+        "name": "@Oppfi_Api",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
